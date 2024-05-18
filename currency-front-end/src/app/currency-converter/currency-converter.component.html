@@ -1,0 +1,29 @@
+<div class="form-container">
+  <div class="form">
+    <div class="form_header">
+      <h1>Currency Converter:</h1>
+    </div>
+    <div class="container">
+      <div class="container_component">
+        <div>From:</div>
+        <input [(ngModel)]="fromCurrency" type="text">
+      </div>
+
+      <div class="container_component">
+        <div>To:</div>
+        <input [(ngModel)]="toCurrency" type="text">
+      </div>
+
+      <div class="container_component">
+        <div>Amount:</div>
+        <input [(ngModel)]="amount" type="text">
+      </div>
+
+    </div>
+
+    <button class="calc_btn" (click)="convertCurrency()">Calculate</button>
+    <div *ngIf="result !== null">
+      Result: {{ result }}
+    </div>
+  </div>
+</div>
